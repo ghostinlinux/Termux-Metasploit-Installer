@@ -10,3 +10,9 @@ Script for installing Metasploit and creating listner
 2. Run 
 
         chmod +x metasploit.sh && ./metasploit.sh
+
+
+---
+### Thanks
+
+[HAX4US](https://github.com/Hax4us)
